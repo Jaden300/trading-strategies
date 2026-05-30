@@ -2,7 +2,9 @@
 
 Python backtesting and parameter-optimization framework for 5 trading strategies, each paired with a TradingView Pine Script. Scan the S&P 500 daily for live signals, backtest any strategy on any ticker, and visualize results with one command.
 
-## Strategies
+![Fleet Comparison - NVDA](assets/preview.png)
+
+## Featured Strategies
 
 | Strategy | Type | Win Rate | Avg Hold |
 |---|---|---|---|
@@ -37,21 +39,21 @@ python compare.py --ticker NVDA
 
 **Run the daily scanner** (after market close):
 ```bash
-python strategy/strategy_elektro/scanner.py
-python strategy/strategy_dca/scanner.py
-python strategy/strategy_rma_atr/scanner.py
-python strategy/strategy_bb_wma/scanner.py
-python strategy/strategy_ema_trail/scanner.py
+python featured/strategy_elektro/scanner.py
+python featured/strategy_dca/scanner.py
+python featured/strategy_rma_atr/scanner.py
+python featured/strategy_bb_wma/scanner.py
+python featured/strategy_ema_trail/scanner.py
 ```
 
 **Re-optimize parameters** (cross-asset grid search):
 ```bash
-python strategy/strategy_rma_atr/tests/test_largecap.py
+python featured/strategy_rma_atr/tests/test_largecap.py
 ```
 
 **TradingView Pine Scripts** - ready to paste, defaults set to optimized params:
 ```
-strategy/strategy_<name>/pine_<name>_largecap.pine
+featured/strategy_<name>/pine_<name>_largecap.pine
 ```
 
 ## Credits

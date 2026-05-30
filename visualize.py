@@ -74,7 +74,7 @@ _YELLOW = "#e3b341"
 
 def _load(strategy: str):
     """Add strategy directory to path and return its run_backtest function."""
-    mod_dir = Path(__file__).parent / "strategy" / f"strategy_{strategy}"
+    mod_dir = Path(__file__).parent / "featured" / f"strategy_{strategy}"
     if str(mod_dir) not in sys.path:
         sys.path.insert(0, str(mod_dir))
     mod = importlib.import_module(f"strategy_{strategy}")

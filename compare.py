@@ -67,7 +67,7 @@ _RED    = "#da3633"
 
 
 def _load(strategy: str):
-    mod_dir = Path(__file__).parent / "strategy" / f"strategy_{strategy}"
+    mod_dir = Path(__file__).parent / "featured" / f"strategy_{strategy}"
     if str(mod_dir) not in sys.path:
         sys.path.insert(0, str(mod_dir))
     return importlib.import_module(f"strategy_{strategy}").run_backtest
